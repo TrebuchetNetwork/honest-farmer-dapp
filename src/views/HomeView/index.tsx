@@ -14,90 +14,103 @@ export const HomeView: FC = ({}) => {
   return (
     <div className="container mx-auto max-w-6xl p-8 2xl:px-0">
       <div className={styles.container}>
-        <div className="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
-          <div className="flex-none">
+        <div className="navbar bg-base-800">
+          <div className="navbar-start">
             <button className="btn btn-square btn-ghost">
               <span className="text-4xl">🦤</span>
             </button>
           </div>
-           <Link href="/swap">
-                  <div className="flex-none">
+          <div className="navbar-center hidden lg:flex">
+            <ul className="menu menu-horizontal p-0">
+              <li>
+                <Link href="/swap">
+                  <a className="font-bold hover:underline">
                     SWAP
-                  </div>
-           </Link>
-          <Link href="/time_staking">
-                  <div className="flex-none">
-                    TIME STAKING
-                  </div>
-           </Link>
-          <Link href="/dao">
-                  <div className="flex-none">
-                    DAO
-                  </div>
-           </Link>
-          <Link href="/active-liquidity">
-                  <div className="flex-none">
-                    Active Liqudity
-                  </div>
-           </Link>
-          <Link href="/analytics">
-                  <div className="flex-none">
-                    Analytics
-                  </div>
-           </Link>
-          <div className="flex-none">
-            <WalletMultiButton className="btn btn-ghost" />
-          </div>
-        </div>
-
-        <div className="text-center pt-2">
-          <div className="hero min-h-16 py-4">
-            <div className="text-center hero-content">
-              <div className="max-w-lg">
-                <h1 className="mb-5 text-5xl font-bold">
-                  Hello Solana <SolanaLogo /> World!
-                </h1>
-                <p className="mb-5">
-                  Welcome to Honest Farmer DAPP
-                </p>
-                <p className="mb-5">
-                  Sollana wallet adapter is connected and ready to use.
-                </p>
-                <p>
-                  {publicKey ? <>Your address: {publicKey.toBase58()}</> : null}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <h1 className="mb-5 pb-8 text-5xl">Templates:</h1>
-            <ul className="text-left leading-10">
-              <li className="mb-5">
-                <Link href="/gallery">
-                  <a className="text-4xl font-bold hover:underline">
-                    🏞 -- NFT Gallery
                   </a>
                 </Link>
               </li>
-              {/* <li className="mb-5">
-                <Link href="/mint">
-                  <a className="text-4xl font-bold hover:underline">
-                    🍬 -- Candy Machine Mint UI
+              <li>
+                <Link href="/time-staking">
+                  <a className="font-bold hover:underline">
+                    TIME STAKING
                   </a>
                 </Link>
-              </li> */}
+              </li>
               <li>
-                <Link href="/tweeter">
-                  <a className="mb-5 text-4xl font-bold hover:underline">
-                    🐦 -- Solana Tweeter
+                <Link href="/dao">
+                  <a className="font-bold hover:underline">
+                    DAO
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/active-liquidity">
+                  <a className="font-bold hover:underline">
+                    Active Liquidity
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/analytics">
+                  <a className="font-bold hover:underline">
+                    Analytics
                   </a>
                 </Link>
               </li>
             </ul>
           </div>
+          <div className="navbar-end">
+            <WalletMultiButton className="btn btn-ghost" />
+          </div>
         </div>
       </div>
+      <div className="text-center pt-2">
+        <div className="hero min-h-16 py-4">
+          <div className="text-center hero-content">
+            <div className="max-w-lg">
+              <h1 className="mb-5 text-5xl font-bold">
+                Hello Solana <SolanaLogo /> World!
+              </h1>
+              <p className="mb-5">
+                Welcome to Honest Farmer DAPP
+              </p>
+              <p className="mb-5">
+                Sollana wallet adapter is connected and ready to use.
+              </p>
+              <p>
+                {publicKey ? <>Your address: {publicKey.toBase58()}</> : null}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div className="max-w-4xl mx-auto">
+          <h1 className="mb-5 pb-8 text-5xl">Templates:</h1>
+          <ul className="text-left leading-10">
+            <li className="mb-5">
+              <Link href="/gallery">
+                <a className="text-4xl font-bold hover:underline">
+                  🏞 -- NFT Gallery
+                </a>
+              </Link>
+            </li>
+            {/* <li className="mb-5">
+              <Link href="/mint">
+                <a className="text-4xl font-bold hover:underline">
+                  🍬 -- Candy Machine Mint UI
+                </a>
+              </Link>
+            </li> */}
+            <li>
+              <Link href="/tweeter">
+                <a className="mb-5 text-4xl font-bold hover:underline">
+                  🐦 -- Solana Tweeter
+                </a>
+              </Link>
+            </li>
+          </ul>
+        </div>
     </div>
   );
 };
