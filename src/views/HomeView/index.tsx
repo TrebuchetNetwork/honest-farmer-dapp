@@ -20,9 +20,31 @@ export const HomeView: FC = ({}) => {
               <span className="text-4xl">🦤</span>
             </button>
           </div>
-          <div className="flex-1 px-2 mx-2">
-            <span className="text-lg font-bold">Caw Caw</span>
-          </div>
+           <Link href="/swap">
+                  <div className="flex-none">
+                    SWAP
+                  </div>
+           </Link>
+          <Link href="/time_staking">
+                  <div className="flex-none">
+                    TIME STAKING
+                  </div>
+           </Link>
+          <Link href="/dao">
+                  <div className="flex-none">
+                    DAO
+                  </div>
+           </Link>
+          <Link href="/active-liquidity">
+                  <div className="flex-none">
+                    Active Liqudity
+                  </div>
+           </Link>
+          <Link href="/analytics">
+                  <div className="flex-none">
+                    Analytics
+                  </div>
+           </Link>
           <div className="flex-none">
             <WalletMultiButton className="btn btn-ghost" />
           </div>
@@ -36,9 +58,7 @@ export const HomeView: FC = ({}) => {
                   Hello Solana <SolanaLogo /> World!
                 </h1>
                 <p className="mb-5">
-                  This scaffold includes awesome tools for rapid development and
-                  deploy dapps to Solana: Next.JS, TypeScript, TailwindCSS,
-                  Daisy UI.
+                  Welcome to Honest Farmer DAPP
                 </p>
                 <p className="mb-5">
                   Sollana wallet adapter is connected and ready to use.

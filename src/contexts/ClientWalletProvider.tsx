@@ -3,7 +3,7 @@ import { WalletProvider } from "@solana/wallet-adapter-react";
 
 import {
   getPhantomWallet,
-  // getLedgerWallet,
+  getLedgerWallet,
   // getMathWallet,
   getSolflareWallet,
   getSolletWallet,
@@ -28,7 +28,7 @@ export function ClientWalletProvider(
       //       "BOM5Cl7PXgE9Ylq1Z1tqzhpydY0RVr8k90QQ85N7AKI5QGSrr9iDC-3rvmy0K_hF0JfpLMiXoDhta68JwcxS1LQ",
       //   },
       // }),
-      // getLedgerWallet(),
+      getLedgerWallet(),
       // getSolongWallet(),
       // getMathWallet(),
       getSolletWallet(),
